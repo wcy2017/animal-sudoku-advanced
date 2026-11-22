@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Animal Puzzle Challenge</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main id="app">
+  <section id="menu" class="screen">
+    <div id="menu-bar"><button id="btn-sound" class="round" aria-label="sound">🔊</button></div>
+    <div id="levels"></div>
+  </section>
+  <section id="path" class="screen hidden">
+    <div id="path-bar"><button id="btn-path-home" class="round" aria-label="home">🏠</button><span id="path-title"></span></div>
+    <div id="path-map"></div>
+  </section>
+  <section id="play" class="screen hidden">
+    <div id="bar">
+      <button id="btn-home" class="round" aria-label="home">🏠</button>
+      <button id="btn-undo" class="round" aria-label="undo">↩️</button>
+      <button id="btn-hint" class="round" aria-label="hint">💡</button>
+      <button id="btn-erase" class="round" aria-label="erase">🧽</button>
+      <button id="btn-trial" class="round" aria-label="试探颜色">🎨</button>
+      <button id="btn-notes" class="round" aria-label="手动候选标记" aria-pressed="false">✎</button>
+      <span id="timer" class="timer">⏱ 0:00</span>
+    </div>
+    <div id="trial-bar" hidden></div>
+    <div id="board"></div>
+    <div id="tray"></div>
+  </section>
+  <div id="win" class="hidden">
+    <div id="confetti"></div>
+    <div id="win-box">
+      <div id="win-emoji">🎉</div>
+      <div id="win-time"></div>
+      <div id="win-best"></div>
+      <div id="win-actions">
+        <button id="btn-win-home" class="big" aria-label="home">🏠</button>
+        <button id="btn-next" class="big" aria-label="next">▶️</button>
+      </div>
+    </div>
+  </div>
+</main>
+<script src="trial-branches.js"></script>
+<script src="game.js"></script>
+</body>
+</html>
